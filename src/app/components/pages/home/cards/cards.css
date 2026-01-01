@@ -1,0 +1,170 @@
+/* ================= GLOBAL THEME ================= */
+body {
+    background: radial-gradient(circle at top, #050505 0%, #020202 40%, #000000 100%) !important;
+    color: #ffffff;
+    padding-bottom: 50px;
+    font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+    color: #00c8ff;
+    text-shadow: 0 0 12px rgba(0, 200, 255, 0.8);
+    letter-spacing: 1px;
+}
+
+/* ================= SEARCH INPUT ================= */
+.search-input {
+    background: #0b0b0b !important;
+    border: 1px solid #1f1f1f;
+    color: #00c8ff !important;
+    padding: 12px 20px;
+    border-radius: 25px !important;
+    box-shadow: 0 0 10px rgba(0, 200, 255, 0.15);
+}
+
+.search-input:focus {
+    border-color: #00c8ff !important;
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.45);
+    outline: none;
+}
+
+/* CLEAR BUTTON INSIDE INPUT */
+.clear-input {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #00c8ff;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    user-select: none;
+    transition: 0.2s ease;
+}
+
+.clear-input:hover {
+    color: #00eaff;
+    text-shadow: 0 0 8px rgba(0, 232, 255, 0.9);
+}
+
+/* ================= CARD DESIGN ================= */
+.crypto-card {
+        background: linear-gradient(145deg, #0e0e0e, #141414);
+        border: 1px solid #1f1f1f;
+        border-radius: 14px;
+        overflow: hidden;
+        position: relative;
+        transition: 0.35s ease;
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+    }
+
+    /* Glow border animation */
+    .crypto-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 14px;
+        padding: 2px;
+        background: linear-gradient(120deg, #00aaff, #005eff, #00aaff);
+        background-size: 300% 300%;
+        animation: glowing 4s ease infinite;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        z-index: 1;
+    }
+
+    .crypto-card:hover::before {
+        opacity: 1;
+    }
+
+    @keyframes glowing {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* Hover lift effect */
+    .crypto-card:hover {
+        transform: translateY(-12px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(0, 120, 255, 0.3);
+        border-color: #00aaff;
+    }
+
+    /* IMAGE */
+    .crypto-img {
+        height: 210px;
+        object-fit: cover;
+        border-bottom: 1px solid #2b2b2b;
+        transition: transform 0.4s ease;
+        position: relative;
+        z-index: 2;
+    }
+
+    .crypto-card:hover .crypto-img {
+        transform: scale(1.08);
+    }
+
+    /* TEXT COLORS */
+    .card-title {
+        color: #e6f7ff;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+        transition: color 0.3s ease;
+        z-index: 2;
+        position: relative;
+    }
+
+    .card-text {
+        color: #c9d1d9;
+        transition: color 0.3s ease;
+        z-index: 2;
+        position: relative;
+    }
+
+    .price {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #00d4ff;
+        text-shadow: 0 0 8px rgba(0, 212, 255, 0.7);
+        transition: color 0.3s ease;
+        z-index: 2;
+        position: relative;
+    }
+
+    .review-stars {
+        color: #ffcd38;
+        text-shadow: 0 0 6px rgba(255, 193, 7, 0.7);
+        transition: color 0.3s ease;
+        z-index: 2;
+        position: relative;
+    }
+
+    /* Make all text turn BLACK on hover */
+    .crypto-card:hover .card-title,
+    .crypto-card:hover .card-text,
+    .crypto-card:hover .price,
+    .crypto-card:hover .review-stars {
+        color: #000 !important;
+        text-shadow: none !important;
+    }
+
+    /* BUTTON */
+    .add-cart-btn {
+        width: 100%;
+        border-radius: 25px;
+        padding: 10px;
+        background: linear-gradient(135deg, #007bff, #009dff);
+        border: none;
+        color: #fff;
+        font-size: 1.05rem;
+        transition: 0.3s ease;
+        box-shadow: 0 0 10px rgba(0, 162, 255, 0.4);
+        position: relative;
+        z-index: 2;
+    }
+
+    .add-cart-btn:hover {
+        background: linear-gradient(135deg, #009dff, #00c6ff);
+        transform: scale(1.06);
+        box-shadow: 0 0 16px rgba(0, 200, 255, 0.7);
+    }

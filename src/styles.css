@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html, body {
+  background-color: #000 !important;
+  color: #ffffff;
+  margin: 0;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+/* Angular Material override */
+.mat-typography,
+.mat-typography *,
+.mat-body,
+.mat-body-1,
+.mat-body-2 {
+  font-family: 'Poppins', sans-serif !important;
+}

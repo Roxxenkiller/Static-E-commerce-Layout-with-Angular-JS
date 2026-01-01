@@ -1,0 +1,23 @@
+<!-- SUBSCRIPTION BANNER WITH BACKGROUND IMAGE -->
+<div class="subscription-banner-bg container-fluid">
+  <div class="banner-content text-center">
+    <h3>Subscribe & Get <span class="highlight">20% OFF</span></h3>
+    <p>Join our newsletter and unlock an instant discount on your first crypto mining hardware purchase.</p>
+
+    <form class="subscription-form" ng-submit="subscribe()">
+      <input
+        type="email"
+        class="form-control email-input"
+        placeholder="Enter your email"
+        ng-model="subscriberEmail"
+        required>
+      <button type="submit" class="btn subscribe-btn">
+        Get 20% Off
+      </button>
+    </form>
+
+    <p class="success-msg" ng-if="subscribed">
+      🎉 Discount code sent to your email!
+    </p>
+  </div>
+</div>

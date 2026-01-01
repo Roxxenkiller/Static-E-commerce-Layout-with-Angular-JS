@@ -1,0 +1,162 @@
+/* ================= ABOUT SECTION ================= */
+.about-section {
+  background: radial-gradient(circle at top, #050505 0%, #020202 60%, #000 100%);
+  color: #c9d1d9;
+}
+
+/* ================= HERO ================= */
+.about-hero {
+  position: relative;
+  height: 450px;
+
+  background-image: url("https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F06b8f9fa-6a7f-45cf-b252-b12215cf956e.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1"); /* change image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+/* Overlay */
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.6)
+    ),
+    radial-gradient(
+      circle at top,
+      rgba(0, 200, 255, 0.25),
+      transparent 70%
+    );
+}
+
+/* Hero content */
+.about-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 15px;
+}
+
+/* ================= TITLES ================= */
+.about-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow:
+    0 0 18px rgba(0, 200, 255, 0.9),
+    0 0 40px rgba(0, 200, 255, 0.5);
+}
+
+.about-title span {
+  color: #00c8ff;
+}
+
+.about-subtitle {
+  max-width: 750px;
+  margin: 15px auto 0;
+  color: #b8dfff;
+}
+
+/* ================= CONTENT ================= */
+.about-heading {
+  color: #00c8ff;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(0, 200, 255, 0.6);
+}
+
+.about-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.about-text .highlight {
+  color: #00eaff;
+  font-weight: 500;
+}
+
+/* Features */
+.about-features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.feature-item i {
+  font-size: 1.4rem;
+  color: #00c8ff;
+  text-shadow: 0 0 10px rgba(0, 200, 255, 0.8);
+}
+
+/* ================= STATS CARDS ================= */
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.about-card {
+  background: linear-gradient(145deg, #050505, #020202);
+  border: 1px solid rgba(0, 200, 255, 0.3);
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+
+  transition: 0.3s ease;
+
+  box-shadow:
+    0 0 18px rgba(0, 200, 255, 0.15),
+    inset 0 0 12px rgba(0, 200, 255, 0.1);
+}
+
+.about-card i {
+  font-size: 2.5rem;
+  color: #00c8ff;
+  margin-bottom: 10px;
+  text-shadow: 0 0 12px rgba(0, 200, 255, 0.8);
+}
+
+.about-card h4 {
+  font-size: 1.8rem;
+  color: #00eaff;
+}
+
+.about-card p {
+  font-size: 0.9rem;
+  color: #9fbcd1;
+}
+
+.about-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 28px rgba(0, 200, 255, 0.45);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .about-hero {
+    height: 280px;
+  }
+
+  .about-title {
+    font-size: 2.2rem;
+  }
+
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+}

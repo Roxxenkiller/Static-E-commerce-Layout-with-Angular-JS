@@ -1,0 +1,161 @@
+<body style="background:#000; overflow-x:hidden;">
+
+<div id="splitCarousel" class="carousel slide position-relative" data-bs-ride="carousel">
+
+  <!-- Floating Crypto Mining Objects -->
+  <div class="floating-objects">
+    <img src="https://cdn-icons-png.flaticon.com/512/14446/14446133.png" class="float-object btc" alt="BTC">
+    <img src="https://cdn-icons-png.flaticon.com/512/14446/14446160.png" class="float-object eth" alt="ETH">
+    <img src="https://cdn-icons-png.flaticon.com/512/8900/8900415.png" class="float-object gpu" alt="GPU">
+    <img src="https://cdn-icons-png.flaticon.com/512/14446/14446125.png" class="float-object coin" alt="coin">
+    <img src="https://cdn-icons-png.flaticon.com/512/14446/14446234.png" class="float-object bolt" alt="bolt">
+    <img src="https://cdn-icons-png.flaticon.com/512/12114/12114244.png" class="float-object cube" alt="cube">
+    <img src="https://cdn-icons-png.flaticon.com/512/14446/14446237.png" class="float-object ltc" alt="LTC">
+  </div>
+
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <div class="d-flex align-items-center" style="height:650px;">
+        <div class="carousel-text flex-fill ps-5">
+          <h5>Crypto Hardware</h5>
+          <p>Premium machines built for modern miners. Max efficiency and reliability guaranteed.</p>
+          <a href="#" class="carousel-btn">Shop Now</a>
+        </div>
+        <div class="carousel-image flex-fill pe-5">
+          <img src="https://images.unsplash.com/photo-1550565227-a6144af19c78?q=80&w=900&auto=format&fit=crop" alt="Crypto Machine">
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <div class="d-flex align-items-center" style="height:650px;">
+        <div class="carousel-text flex-fill ps-5">
+          <h5>High-Performance GPU Mining</h5>
+          <p>Next-generation GPUs designed for extreme hash rate output with advanced cooling and stability.</p>
+          <a href="#" class="carousel-btn">Discover More</a>
+        </div>
+        <div class="carousel-image flex-fill pe-5">
+          <img src="https://images.unsplash.com/photo-1631897641792-cdf65cceda02?q=80&w=900&auto=format&fit=crop" alt="GPU Mining">
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <div class="d-flex align-items-center" style="height:650px;">
+        <div class="carousel-text flex-fill ps-5">
+          <h5>Advanced ASIC Machines</h5>
+          <p>Professional-grade ASIC miners for reliable high-output performance in mining farms.</p>
+          <a href="#" class="carousel-btn">Get Started</a>
+        </div>
+        <div class="carousel-image flex-fill pe-5">
+          <img src="https://images.unsplash.com/photo-1641580559176-d4b2b44863b4?q=80&w=900&auto=format&fit=crop" alt="ASIC Mining">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#splitCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#splitCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<style>
+body { background:#000; overflow-x:hidden; }
+
+/* Floating Crypto Objects */
+.floating-objects {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.float-object {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  opacity: 0.8;
+  filter: drop-shadow(0 0 8px #00ffff) drop-shadow(0 0 14px #007bff);
+  animation: floatObj linear infinite;
+}
+
+.float-object.btc { left: 5%; animation-duration: 14s; }
+.float-object.eth { left: 20%; animation-duration: 12s; animation-delay: 2s; }
+.float-object.gpu { left: 35%; animation-duration: 18s; animation-delay: 1s; }
+.float-object.coin { left: 50%; animation-duration: 10s; animation-delay: 3s; }
+.float-object.bolt { left: 65%; animation-duration: 16s; animation-delay: 2s; }
+.float-object.cube { left: 80%; animation-duration: 20s; animation-delay: 4s; }
+.float-object.ltc { left: 90%; animation-duration: 12s; animation-delay: 0s; }
+
+/* Floating and rotating animation */
+@keyframes floatObj {
+  0% { transform: translateY(700px) rotate(0deg); opacity: 0; }
+  25% { opacity: 1; }
+  50% { transform: translateY(350px) rotate(45deg); }
+  75% { opacity: 1; }
+  100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+}
+
+/* Carousel Styles */
+.carousel-item {
+  background: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-text h5 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #00c6ff;
+  text-shadow: 0 0 8px #00c6ff, 0 0 14px #007bff;
+  animation: floatText 2s ease-in-out infinite alternate;
+}
+
+.carousel-text p {
+  font-size: 1.2rem;
+  color: #7affff;
+  margin: 1rem 0;
+}
+
+.carousel-btn {
+  padding: 0.7rem 2rem;
+  background: rgba(0,255,255,0.15);
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  font-weight: 700;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.carousel-btn:hover {
+  background: #00ffff;
+  color: #000;
+  box-shadow: 0 0 15px #00ffff, 0 0 25px #007bff;
+}
+
+@keyframes floatText {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-10px); }
+}
+
+.carousel-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+  animation: floatImage 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatImage {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  100% { transform: translateY(-12px) rotate(1deg); }
+}
+</style>

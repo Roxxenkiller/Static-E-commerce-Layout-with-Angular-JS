@@ -1,0 +1,104 @@
+/* ===== SUBSCRIPTION BANNER WITH BACKGROUND IMAGE ===== */
+.subscription-banner-bg {
+    position: relative;
+    width: 100%;
+    padding: 190px 20px;
+    background: url('https://assets.staticimg.com/cms/media/EWhB7HXXqeyKsNu56o4ynzGdN7NCdtkD2VJNrFHAL.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 60px 0;
+    color: #ffffff;
+}
+
+
+/* Dark overlay on image */
+.subscription-banner-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.473); /* dark overlay */
+    z-index: 1;
+    border-radius: 20px;
+}
+
+/* Banner content above overlay */
+.banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Headings */
+.banner-content h3 {
+    color: #00c8ff;
+    margin-bottom: 12px;
+    text-shadow: 0 0 12px rgba(0, 200, 255, 0.7);
+}
+
+.banner-content .highlight {
+    color: #00ffae;
+}
+
+/* Paragraph */
+.banner-content p {
+    color: #cfd9e0;
+    margin-bottom: 20px;
+}
+
+/* Form */
+.subscription-form {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.email-input {
+    width: 260px;
+    padding: 12px 18px;
+    border-radius: 30px;
+    border: 1px solid #1f1f1f;
+    background: rgba(11,11,11,0.8);
+    color: #00c8ff;
+}
+
+.email-input::placeholder {
+    color: #6bdcff;
+}
+
+/* Button */
+.subscribe-btn {
+    border-radius: 30px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #00c853, #00ffae);
+    border: none;
+    color: #000;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(0, 255, 174, 0.9);
+}
+
+/* Success message */
+.success-msg {
+    margin-top: 12px;
+    color: #00ffae;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .subscription-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .email-input {
+        width: 90%;
+    }
+}

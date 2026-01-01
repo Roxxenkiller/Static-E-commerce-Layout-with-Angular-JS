@@ -1,0 +1,53 @@
+<div class="container my-5">
+
+  <h2 class="text-center mb-4 fw-bold">Crypto Mining Hardware</h2>
+
+  <!-- SEARCH BOX -->
+   <form ></form>
+  <div class="search-box d-flex justify-content-center mb-4 position-relative">
+    <div class="input-group w-50">
+      <input
+  type="text"
+  class="form-control search-input"
+  placeholder="Search mining hardware..."
+  [(ngModel)]="searchText"
+  name="search-box">
+
+      <!-- Clear button -->
+      <span 
+        class="clear-input"
+        *ngIf="searchText"
+        (click)="searchText=''">
+        ×
+      </span>
+    </div>
+  </div>
+
+  <!-- NO RESULTS MESSAGE -->
+  <div *ngIf="filteredCards.length === 0" class="text-center text-warning mb-4">
+    No products found.
+  </div>
+
+  <!-- CARDS -->
+  <div class="row g-4">
+    <div class="col-md-3" *ngFor="let card of filteredCards">
+      <div class="card crypto-card">
+        <img 
+          [src]="card.image"
+          class="card-img-top crypto-img"
+          [alt]=""
+        >
+        <div class="card-body">
+          <h5 class="card-title">{{ card.title }}</h5>
+          <p class="card-text">{{ card.description }}</p>
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="price">Rs <span>{{ card.price }}</span></div>
+            <span class="review-stars">{{ card.rating }}</span>
+          </div>
+          <button class="btn add-cart-btn mt-3">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
